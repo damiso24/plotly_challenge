@@ -1,5 +1,5 @@
 function dropdown() {
-    d3.json("../data/samples.json").then((data)=> {
+    d3.json("/data/samples.json").then((data)=> {
         console.log(data)
         // point to the dropdown menu 
         var dropMenu = d3.select("#selDataset");
@@ -15,7 +15,7 @@ function dropdown() {
 }
 
 function demoInfo(sample) {
-    d3.json("../data/samples.json").then((data) =>{
+    d3.json("/data/samples.json").then((data) =>{
         console.log(data);
         var metadata = data.metadata;
         console.log(metadata);
@@ -61,7 +61,7 @@ function demoInfo(sample) {
 
 function buildCharts(sample) {
     // promise, when it is fullfilled then show it.
-    d3.json("../data/samples.json").then((data) => {
+    d3.json("/data/samples.json").then((data) => {
         // console.log(data);
 
         var allData = data;  
